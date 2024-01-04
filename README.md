@@ -29,3 +29,9 @@ Based off instructions by [ConsoleMods](https://consolemods.org/wiki/PS3:PS3HEN)
 Please don't submit issues relating to the ConsoleMods page. I'm not here to diagnose issues with you installing PS3HEN on your Playstation 3. However, if this script fails (e.g. it presses a button too quickly or something), I'd prefer you submit a Pull Request instead of an issue.
 
 But if the script fails at some point, just stop it, go back to the Internet Browser icon in the XMB then run the script again
+
+## To do / wishlist
+
+- [ ] Automate the installation of the PS3 update in a way that works across PS3 versions as some versions have slightly different menus?
+- [ ] See if I can reboot the PS3 using the keyboard
+- [ ] Install Irisman and / or other packages
