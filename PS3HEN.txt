@@ -1,0 +1,118 @@
+REM This script automates the installation of PS3Hen
+REM In order for this to work, you must have a USB stick inserted that has the exploitable update file on it.
+REM When you're ready, make sure you've got the exploitable firmware installed, then go to Internet Browser on the PS3 (but don't run it) and run this script
+
+REM First, we're going to set the defaultdelay because of the menu animations. If you find the script fails, increase this
+DEFAULTDELAY 250
+
+REM Now, we open the browser. It'll take a while to load, so we just wait for 10 seconds. If the script gets out of sync because it takes longer than 10 seconds, cancel the script and run it again with the browser open.
+ENTER
+DELAY 10000
+
+REM Next, we set the browser to not prompt to close when we try and exit
+F1
+UP
+UP
+RIGHT
+DOWN
+REPEAT 4
+RIGHT
+DOWN
+ENTER
+
+REM At this point we should be back on the homepage, so next we set the homepage to about:blank
+F1
+UP
+UP
+RIGHT
+DOWN
+REPEAT 5
+ENTER
+DOWN
+ENTER
+DOWN
+REPEAT 2
+ENTER
+
+REM Now we're going to clear cookies
+F1
+UP
+UP
+RIGHT
+DOWN
+REPEAT 6
+ENTER
+DELAY 250
+LEFT
+ENTER
+
+REM Now we're going to clear search
+F1
+UP
+UP
+RIGHT
+DOWN
+REPEAT 7
+ENTER
+DELAY 250
+LEFT
+ENTER
+
+REM Now we're going to clear cache
+F1
+UP
+UP
+RIGHT
+DOWN
+REPEAT 8
+ENTER
+DELAY 250
+LEFT
+ENTER
+
+REM Now we're going to clear the authentication credentials or whatever
+F1
+UP
+UP
+RIGHT
+DOWN
+REPEAT 9
+ENTER
+DELAY 250
+LEFT
+ENTER
+
+REM Now we close the browser and open it again
+ESCAPE
+DELAY 1000
+ENTER
+DELAY 5000
+
+REM Next, we go to the PS3Addict GitHub page, select the alternate installer, start the install, then exit
+F4
+BACKSPACE
+REPEAT 14
+STRINGDELAY 50
+STRINGLN https://ps3addict.github.io
+DELAY 5000
+UP
+ENTER
+DELAY 5000
+UP
+ENTER
+WAIT_FOR_BUTTON_PRESS
+ESCAPE
+
+REM Next we go up to Remote Play and run it. This takes a bit, so we just delay for 20 seconds. It also takes a bit to exit, so we wait another 20 seconds.
+UP
+ENTER
+DELAY 20000
+ESCAPE
+DELAY 20000
+
+REM Now we go to Install HEN and confirm. Then we're done
+UP
+ENTER
+ENTER
+DELAY 250
+ENTER
